@@ -23,8 +23,6 @@ http://127.0.0.1:8000
 - `map.js` - D3 map rendering, mode switching, unit conversion, and temperature logic.
 - `thailand.json` - province GeoJSON.
 - `temperature.json` - province temperature data.
-- `map_bg.png` - watercolor background for the map frame.
-- `sunny.png` - header mascot image.
 - `d3.v3.min.js` - local D3 v3 dependency.
 
 ## Temperature Data Shape
