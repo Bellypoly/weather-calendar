@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What's Cooking, Thailand?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:wght@400;700&family=Cherry+Bomb+One&family=Fuzzy+Bubbles:wght@400;700&family=Gaegu:wght@400;700&family=Mansalva&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <div class="hero__mascot" aria-hidden="true">
+        <img src="sunny.png" alt="">
+      </div>
+
+      <div>
+        <p class="hero__eyebrow">What's cooking,</p>
+        <h1>Thailand?</h1>
+        <p class="hero__subtitle">
+          From <strong>AC Weather</strong> to
+          <strong>Human Air Fryer</strong>.
+        </p>
+      </div>
+
+      <nav class="mode-toggle" aria-label="Temperature mode">
+        <button class="mode-toggle__button" type="button" data-mode="month">Monthly</button>
+        <button class="mode-toggle__button is-active" type="button" data-mode="year">Annual</button>
+      </nav>
+
+      <button class="unit-toggle" type="button" aria-label="Toggle temperature unit">
+        Â°F
+      </button>
+
+      <aside class="info-widget" aria-label="Data sources">
+        <button class="info-widget__button" type="button" aria-label="Show data sources">i</button>
+        <div class="info-widget__panel">
+          <p class="info-widget__title">Sources</p>
+          <a href="https://weatherspark.com/compare" target="_blank" rel="noreferrer">
+            Weather data
+          </a>
+          <a href="https://github.com/apisit/thailand.json" target="_blank" rel="noreferrer">
+            Thailand map
+          </a>
+        </div>
+      </aside>
+    </header>
+
+    <section class="dashboard">
+      <section class="map-card" aria-label="Thailand temperature map">
+        <div class="month-tabs" aria-label="Select month"></div>
+
+        <div class="map-frame">
+          <aside class="legend" aria-label="Average temperature legend">
+            <p class="legend__title">Temperature (Â°F)</p>
+            <div class="legend__items"></div>
+            <div class="map-note">
+              <strong>Scientific climate data.</strong>
+              Emotionally devastating results.
+            </div>
+          </aside>
+
+          <div id="map" class="map-canvas" aria-label="Interactive Thailand province map"></div>
+        </div>
+      </section>
+
+      <aside class="detail-card" aria-label="Selected province details">
+        <div class="detail-card__header">
+          <div>
+            <h2 class="detail-card__city">Somewhere in Thailand</h2>
+          </div>
+        </div>
+
+        <div class="detail-card__temperature">
+          <div>
+            <strong class="detail-card__value">--.-°F</strong>
+            <span class="detail-card__caption">Awaiting human suffering data</span>
+          </div>
+        </div>
+
+        <section class="heat-mood heat-mood--idle" aria-label="Temperature heat mood">
+          <div class="heat-mood__emoji" aria-hidden="true">&#127777;&#65039;</div>
+          <div class="heat-mood__content">
+            <p class="heat-mood__eyebrow">Heat Mood</p>
+            <h3 class="heat-mood__label">Select Your Difficulty</h3>
+            <p class="heat-mood__range">Thailand heat simulator ready.</p>
+            <p class="heat-mood__meme">Click a province to discover</p>
+          </div>
+        </section>
+
+        <p class="heat-note">how cooked humans become.</p>
+        <p class="monthly-circles__title"></p>
+        <div class="monthly-circles" aria-label="Selected province monthly temperatures"></div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="d3.v3.min.js"></script>
+  <script src="map.js"></script>
+</body>
+</html>
